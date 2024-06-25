@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ExtensionVersion>8.0.0</ExtensionVersion>
+    <CommonRelease>0.4.9</CommonRelease>
+    <OpenTelemetryVersion>1.7.0</OpenTelemetryVersion>
+    <MSTestVersion>3.0.4</MSTestVersion>
+    <SpecflowVersion>3.9.57</SpecflowVersion>
+    <ReqnrollVersion>1.0.1</ReqnrollVersion>
+    <KustoVersion>12.0.1</KustoVersion>
+    <AspNetCoreVersion>2.2.0</AspNetCoreVersion>
+  </PropertyGroup>
+
+  <ItemGroup Label="Common">
+    <PackageReference Update="Microsoft.AzS.Common.Auth" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.Cache" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.Config" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.DocDb" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.Hosts" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.Http" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.KeyVault" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.Kusto" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.Monitoring" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.Settings" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.Shared" Version="$(CommonRelease)" />
+    <PackageReference Update="Microsoft.AzS.Common.Storage" Version="$(CommonRelease)" />
+  </ItemGroup>
+
+  <ItemGroup Label="Misc">
+    <PackageReference Update="Nerdbank.GitVersioning" Version="3.6.133" />
+    <PackageReference Update="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup Label="UnitTests">
+    <PackageReference Update="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Update="FluentAssertions" Version="6.12.0" />
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.6.0"/>
+    <PackageReference Update="MSTest.TestAdapter" Version="$(MSTestVersion)"/>
+    <PackageReference Update="MSTest.TestFramework" Version="$(MSTestVersion)"/>
+    <PackageReference Update="Specflow" Version="$(SpecflowVersion)" />
+    <PackageReference Update="Specflow.Tools.MsBuild.Generation" Version="$(SpecflowVersion)" />
+    <PackageReference Update="Specflow.xUnit" Version="$(SpecflowVersion)" />
+    <PackageReference Update="Specflow.Plus.LivingDocPlugin" Version="3.9.57" />
+    <PackageReference Update="Specflow.MsTest" Version="$(SpecflowVersion)" />
+    <PackageReference Update="Reqnroll.MsTest" Version="$(ReqnrollVersion)" />
+    <PackageReference Update="Reqnroll.xUnit" Version="$(ReqnrollVersion)" />
+    <PackageReference Update="Reqnroll.Tools.MsBuild.Generation" Version="$(ReqnrollVersion)" />
+    <PackageReference Update="Reqnroll.SpecFlowCompatibility" Version="$(ReqnrollVersion)" />
+    <PackageReference Update="xunit" Version="2.6.6" />
+    <PackageReference Update="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
